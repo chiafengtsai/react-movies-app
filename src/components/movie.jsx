@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 const Movie = props => {
-  const { title, genre, stock, rate } = props;
+  const { title, genre, stock, rate, onDelete, movie } = props;
   return (
     <tr>
       <th scope="row">{title}</th>
@@ -8,7 +8,7 @@ const Movie = props => {
       <td>{stock}</td>
       <td>{rate}</td>
       <td>
-        <button type="button" className="btn btn-danger">
+        <button onClick={() => onDelete(movie)} className="btn btn-danger">
           Delete
         </button>
       </td>
