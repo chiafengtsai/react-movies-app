@@ -58,6 +58,7 @@ class Movies extends Component {
       selectedGenre,
       movies: allMovies
     } = this.state;
+
     const filtered =
       selectedGenre && selectedGenre.name !== "All Genres"
         ? allMovies.filter(m => m.genre._id === selectedGenre._id)
