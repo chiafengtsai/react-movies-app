@@ -1,10 +1,17 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import _ from "lodash";
 // import Like from "./like.jsx";
 
 class TableBody extends Component {
   renderCell = (item, column) => {
+    // if it's like or delete button,
+    // return react element.
     if (column.content) return column.content(item);
+    if (column.path === "title") {
+      const path = `/movies/${item._id}`;
+      return <Link to={path}>{_.get(item, column.path)}</Link>;
+    }
     return _.get(item, column.path);
   };
   createKey = (item, column) => {
