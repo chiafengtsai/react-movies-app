@@ -13,3 +13,7 @@ Setting the interface of the component and defining the default values. The inte
 ## Reusable Components
 
 Extracting low level elements into common components, this makes the code more clean and readable.
+
+## Router
+
+Users can navigate from page to page to see different components rendered by navbar.
